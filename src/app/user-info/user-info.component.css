@@ -1,1 +1,36 @@
+a {
+    display: block;
+    color: rgb(8, 7, 7);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: large;
+}
+div{
+    text-align: center;
+}
+a:hover {
+    color: #5232b7;
+    background-color: white;
+    
+}
+ li{
+    list-style-type: none;
 
+ }
+li .wishlist{
+    float:left;
+}
+li .current-courses{
+    float:left;
+}
+p{
+    font-size: 25px;
+    color: #5232b7;
+    text-decoration: none;
+    padding:5px;
+    margin-left:40px;
+    font-weight: bold;
+
+}
