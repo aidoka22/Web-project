@@ -1,4 +1,8 @@
-<h2>Course of {{course.name}}</h2>
-<h4>{{course.title}}</h4>
-<p>{{course.description}}</p>
-<button (click)="goBack()">Go Back</button>
+<div *ngIf="course">
+  <h2>Course of {{course.name}}</h2>
+  <h4>{{course.title}}</h4>
+  <p>{{course.description}}</p>
+  <button (click)="addToCart(course)">Add to Cart</button>
+  <button (click)="goBack()">Go Back</button>
+</div>
+
