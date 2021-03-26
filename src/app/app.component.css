@@ -1,0 +1,43 @@
+ul {
+    padding: 0;
+    margin: 0;
+    background-color: #5232b7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+  }
+  
+  li.left {
+    float: left;
+  }
+  
+  li.right {
+    float: right;
+  }
+  li.right1{
+    float:right;
+  }
+  a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+  }
+  
+  a:hover {
+    color: #5232b7;
+    background-color: white;
+  }
+  
+  .content {
+    padding: 20px 20% 0 20%;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  
