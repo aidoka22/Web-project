@@ -14,6 +14,9 @@ const routes: Routes = [
   {path:'user-info',component: UserInfoComponent},
   {path:'wishlist',component:WishlistComponent},
   {path:'current-courses',component:CurrentCoursesComponent},
+  {path: 'courses', component: CourseListComponent},
+  {path: 'courses/:id', component: CourseDetailsComponent},
+  {path: 'cart', component: CartComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
