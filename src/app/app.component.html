@@ -1,25 +1,22 @@
 <body>
-    <nav>
-      <ul >
-        <li class="left">
-          <a routerLink="/home" class="main-menu-option">Home</a>
-        </li>
-        <li class="right">
-            <a routerLink="courses">Courses</a>
-        </li>
-        <li class="right">
-            <a routerLink="cart">Cart</a>
-        </li>
-        <li class="right">
-          <a routerLink="/login" >Login</a>
-        </li>
-        <li class="right1">
-          <a routerLink="/user-info">User</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-    </body>
+<header>
+  <img class="logo" src="assets/logo.png" alt="logo">
+  <nav>
+    <ul class="nav_links">
+      <li><a routerLink="/home" class="main-menu-option">Home</a></li>
+      <li><a class="main-menu-option">Cources</a></li>
+    </ul>
+  </nav>
+  <div class="buttons">
+    <a routerLink="/login" class="cta"><button>Login</button></a>
+    <a routerLink="/create" class="cta"><button>Register</button></a>
+  </div>
+</header>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+<!--<footer class="footer">-->
+<!--&lt;!&ndash;  <h1>Hi</h1>&ndash;&gt;-->
+<!--</footer>-->
+</body>
     
