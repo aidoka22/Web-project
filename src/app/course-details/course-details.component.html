@@ -1,8 +1,23 @@
 <div *ngIf="course">
-  <h2>Course of {{course.name}}</h2>
-  <h4>{{course.title}}</h4>
-  <p>{{course.description}}</p>
-  <button (click)="addToCart(course)">Add to Cart</button>
-  <button (click)="goBack()">Go Back</button>
+  <div class="top text">
+    <h2>Course of {{course.name}}</h2>
+    <h4>{{course.title}}</h4>
+    <button class="btn wishlist">Wishlist</button>
+    <button class="btn wishlist share">Share</button>
+  </div>
+
+  <div class="side">
+    <div class="image-div"></div>
+    <p class="text">Cost: {{course.cost | currency}}</p>
+    <button (click)="addToCart(course)" class="btn sidebtn">Add to Cart</button>
+    <button class="btn sidebtn">Buy now</button>
+  </div>
+
+  <div class="bottom">
+    <p class="text">{{course.description}}</p>
+    <button (click)="goBack()" class="btn goback">Go Back</button>
+  </div>
+
+
 </div>
 
