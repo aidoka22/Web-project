@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import {WishListService} from "../wishlist.service";
-
+import {WishListService} from '../wishlist.service';
+import {CartService} from '../cart.service';
 @Component({
   selector: 'app-wishlist',
   templateUrl: './wishlist.component.html',
   styleUrls: ['./wishlist.component.css']
 })
-export class WishListComponent implements OnInit {
-  items = this.wishlistService.getItems();
-
-  constructor(private wishlistService: WishListService) { }
+export class WishlistComponent implements OnInit {
+  wishs=this.wishListService.getwishs();
+  constructor(private wishListService:WishListService,
+    private cartService:CartService) { }
 
   ngOnInit(): void {
   }
-
-  clearCart() {
-    this.items = this.wishlistService.clearWishlist();
+  addToCart(wish){
+      this.cartService.addToCart(wish);
   }
-
+  clearWishList(){
+    this.wishs=this.wishListService.clearWishList();
+  }
 }
-
