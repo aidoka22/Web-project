@@ -1,20 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import {Course} from "../models";
-import {CurrentCourses} from "../currentcourses-db";
+import {CurrentCoursesService} from "../current-courses.service";
 
 @Component({
-  selector: 'app-course-list',
-  templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.css']
+  selector: 'app-current-courses',
+  templateUrl: './current-courses.component.html',
+  styleUrls: ['./current-courses.component.css']
 })
 export class CurrentCoursesComponent implements OnInit {
   courses: Course[];
-  constructor() {
-    this.courses = [];
+
+  constructor(private currentcoursesService: CurrentCoursesService) {
+    // this.courses = [];
   }
 
   ngOnInit(): void {
-    this.courses = CurrentCourses;
+    this.getCourses();
+    // this.courses = COURSES;
   }
 
+  getCourses() {
+    this.courses = this.currentcoursesService.getCourses();
+  }
 }
