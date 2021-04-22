@@ -66,3 +66,10 @@ button:hover {
   background-color: #9c14de;
   color: white;
 }
+
+#footer {
+  position: relative;
+  background-color: #6dff2f;
+  height: 200px;
+  clear: both;
+}
