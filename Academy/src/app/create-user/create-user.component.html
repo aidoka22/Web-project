@@ -1,18 +1,18 @@
-<form class="box"> <!--action="index.html" method="post"-->
-  <h1>Register</h1>
-  <div>
-    <p>How are you?</p>
-    <input type="radio" name="choose"> Student
+<div class="box"> <!--action="index.html" method="post"-->
+  <div class="top">
+    <h1>Register</h1>
+    <p>Register as a student or teacher?</p>
+    <input type="radio" name="choose" [(ngModel)]="student"> Student
     <input type="radio" name="choose"> Teacher
   </div>
-  <input type="text" name="" placeholder="Name">
-  <input type="text" name="" placeholder="Surname">
+  <input type="text" name="" placeholder="Name" [(ngModel)]="name">
+  <input type="text" name="" placeholder="Surname" [(ngModel)]="surname">
 <!--  <input type="text" name="" placeholder="Phone number">-->
 <!--  <p>Enter your date of birth</p>-->
 <!--  <input type="date">-->
-  <input type="text" name="" placeholder="Username">
-  <input type="password" name="" placeholder="Create password">
+  <input type="text" name="" placeholder="Username" [(ngModel)]="username">
+  <input type="password" name="" placeholder="Create password" [(ngModel)]="password">
 <!--  <input type="password" name="" placeholder="Confirm password">-->
-  <input type="button" name="" value="Register">
+  <input type="button" name="" value="Register" (click)="register()">
   <a routerLink="/login">Do you have account? Log in!</a>
-</form>
+</div>

@@ -14,5 +14,4 @@ export class CurrentCoursesService {
   getCourse(id: number) {
     return CurrentCourses.find((x) => x.id === id);
   }
-
 }

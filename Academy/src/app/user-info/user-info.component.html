@@ -1,20 +1,30 @@
-<div class="wrapper"><div class="center"><p>  Chace Wonderkolf's info </p>
- 
-  <img src="https://www.adzuna.com/blog/wp-content/uploads/2017/04/chace-crawford-004.jpg"
-       alt="User's photo"  width=40% >
-  <div id="info">Name: <div class="user">Chace Wonderkolf</div> 
-    Position:<div class="user">Student</div>
-    Age:  <div class="user">18</div>
-    Location: <div class="user">Almaty</div>
-    Github:<div class="user">chacewondd</div></div>
-  <ul>
-    <li class="list">
-      <a routerLink="/wishlist">WishList</a><br>
-    </li>
-    <li class="list">
-      <a routerLink="/current-courses">Current-courses</a><br>
-    </li>
-    <li class="list">
-      <a routerLink="/cart">Cart</a>
-    </li>
-  </ul></div></div>
+<div class="wrapper">
+  <div class="left">
+    <img src="https://www.adzuna.com/blog/wp-content/uploads/2017/04/chace-crawford-004.jpg" width="100%">
+  </div>
+  <div class="right">
+
+    <div class="info">
+      <h3>Information</h3>
+      <div class="info_data">
+        <div class="data">
+          <h4>Name</h4>
+          <p>{{this.name}}</p>
+        </div>
+        <div class="data">
+          <h4>Surname</h4>
+          <p>{{this.surname}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h3>Category - {{this.category}}</h3>
+    </div>
+
+    <div class="buttons">
+      <a routerLink="/wishlist"><button>My WishList</button></a>
+      <a routerLink="/current-courses"><button>My courses</button></a>
+    </div>
+
+  </div>
+</div>

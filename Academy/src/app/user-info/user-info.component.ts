@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class UserInfoComponent implements OnInit {
 
   constructor() { }
+  name = 'Andrew';
+  surname = 'Milton';
+  category = 'Student';
 
   ngOnInit(): void {
   }
