@@ -11,7 +11,9 @@
   </div>
 
   <div class="side">
-    <div class="image-div"></div>
+    <div class="image-div">
+      <img src="{{course.imagepath}}">
+    </div>
     <p class="text">Cost: {{course.cost | currency}}</p>
     <div class="buttonsside">
       <button (click)="addToCart(course)" class="btn sidebtn">Add to Cart</button>
