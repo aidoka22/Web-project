@@ -4,19 +4,19 @@
   <nav>
     <ul class="nav_links">
       <li><a routerLink="/home" class="main-menu-option">Home</a></li>
-      <li><a class="main-menu-option">Cources</a></li>
+      <li><a routerLink="/courses" class="main-menu-option">Courses</a></li>
     </ul>
   </nav>
   <div class="buttons">
-    <a routerLink="/login" class="cta"><button>Login</button></a>
-    <a routerLink="/create" class="cta"><button>Register</button></a>
+    <a *ngIf="!logged" routerLink="/login" class="cta"><button>Login</button></a>
+<!--    <a *ngIf="logged && student" routerLink="/profile" class="cta"><button>Profile</button></a>&ndash;&gt;-->
+    <a *ngIf="logged && student" routerLink="/user-info" class="cta"><button>Profile</button></a>
+    <a *ngIf="logged && student" routerLink="/cart" class="cta"><button>Cart</button></a>
+    <a *ngIf="logged && teacher" routerLink="/teacher-info" class="cta"><button>Profile</button></a>
+    <a *ngIf="logged" routerLink="/home" class="cta" (click)="logout()"><button>Log out</button></a>
   </div>
 </header>
 <div class="content">
   <router-outlet></router-outlet>
 </div>
-<footer id="footer">
-
-</footer>
 </body>
-    
