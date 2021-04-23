@@ -4,6 +4,12 @@ export interface Course {
     title: string;
     cost: number;
     description: string;
+    category: number;
+  }
+
+export interface Category {
+  id: number;
+  name: string;
   }
   
   export class Teacher { // extends User
