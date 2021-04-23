@@ -5,6 +5,7 @@ export interface Course {
     cost: number;
     description: string;
     category: number;
+    imagepath: string;
   }
 
 export interface Category {
