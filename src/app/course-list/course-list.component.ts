@@ -25,4 +25,13 @@ export class CourseListComponent implements OnInit {
     this.courses = this.coursesService.getCourses();
   }
 
+  scroll($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
+  // scroll(el: HTMLElement) {
+  //   el.scrollIntoView();
+  // }
+
 }
