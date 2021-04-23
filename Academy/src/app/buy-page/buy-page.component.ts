@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {CartService} from '../cart.service';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-buy-page',
+  templateUrl: './buy-page.component.html',
+  styleUrls: ['./buy-page.component.css']
 })
-export class CartComponent implements OnInit {
+export class BuyPageComponent implements OnInit {
   items = this.cartService.getItems();
 
   constructor(private cartService: CartService) { }
@@ -17,5 +17,4 @@ export class CartComponent implements OnInit {
   clearCart() {
     this.items = this.cartService.clearCart();
   }
-
 }

@@ -1,0 +1,31 @@
+<div class="top">
+  <h2 class="text">Payment</h2>
+</div>
+<div class="white"></div>
+
+<div class="payment-div">
+  <form class="box">
+    <label>Name on card</label>
+    <input type="text" name="cardname" placeholder="Aliya Kenzhebekova">
+    <label>Credit card number</label>
+    <input type="text" name="cardnumber" placeholder="1111-2222-3333-4444">
+    <label>Exp Month</label>
+    <input type="text" name="expmonth" placeholder="September">
+    <label>Exp Year</label>
+    <input type="text" name="expyear" placeholder="2022">
+    <label>CVV</label>
+    <input type="text" name="cvv" placeholder="123">
+  </form>
+</div>
+
+<div class="checkout">
+  <h3>Checkout</h3>
+  <div *ngFor="let item of items">
+    <span>{{item.name}} </span>
+    <span class="right">{{item.cost | currency}}</span>
+  </div>
+  <div class="total">
+    <p>Total:</p>
+  </div>
+  <button (click)="clearCart()" class="buybtn">Buy</button>
+</div>

@@ -17,7 +17,7 @@ import { CourseAddingComponent } from './course-adding/course-adding.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {AuthInterceptor} from './AuthInterceptor';
-import { ProfileComponent } from './profile/profile.component';
+import { BuyPageComponent } from './buy-page/buy-page.component';
 
 
 @NgModule({
@@ -34,7 +34,7 @@ import { ProfileComponent } from './profile/profile.component';
     CurrentCoursesComponent,
     TeacherInfoComponent,
     CourseAddingComponent,
-    ProfileComponent,
+    BuyPageComponent,
   ],
   imports: [
     BrowserModule,

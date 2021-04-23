@@ -3,14 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent} from './login-page/login-page.component';
 import { CreateUserComponent} from './create-user/create-user.component';
-import { CourseListComponent } from './course-list/course-list.component';
-import { CourseDetailsComponent } from './course-details/course-details.component';
-import { CartComponent } from './cart/cart.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
-import {CurrentCoursesComponent} from './current-courses/current-courses.component';
+import { CartComponent } from './cart/cart.component';
+import { CurrentCoursesComponent } from './current-courses/current-courses.component';
+
+import { CourseListComponent } from './course-list/course-list.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 import { TeacherInfoComponent } from './teacher-info/teacher-info.component';
 import { CourseAddingComponent } from './course-adding/course-adding.component';
+import {BuyPageComponent} from './buy-page/buy-page.component';
 
 const routes: Routes = [
   {path: 'home', component: HomePageComponent},
@@ -24,6 +26,7 @@ const routes: Routes = [
   {path: 'courses', component: CourseListComponent},
   {path: 'courses/:id', component: CourseDetailsComponent},
   {path: 'cart', component: CartComponent},
+  {path: 'buy', component: BuyPageComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
