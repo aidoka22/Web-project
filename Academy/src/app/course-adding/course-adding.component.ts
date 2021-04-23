@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseAddingComponent implements OnInit {
 
+  name = '';
+  title = '';
+  description = '';
+  cost = '';
+
   constructor() { }
 
   ngOnInit(): void {

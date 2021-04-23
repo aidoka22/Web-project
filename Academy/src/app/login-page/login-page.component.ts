@@ -12,6 +12,7 @@ export class LoginPageComponent {
 
   username = '';
   password = '';
+  student = '';
 
   constructor(private loginService: LoginService, private appComponent: AppComponent) { }
   //
@@ -23,12 +24,15 @@ export class LoginPageComponent {
   // }
 
   login() {
-    // console.log(this.username)
-    this.loginService.login(this.username, this.password).subscribe( (data) => {
-      localStorage.setItem('token', data.token);
-      this.appComponent.logged = true
-      this.username = '';
-      this.password = '';
-    });
+    // // console.log(this.username)
+    // this.loginService.login(this.username, this.password).subscribe( (data) => {
+    //   localStorage.setItem('token', data.token);
+    //   this.appComponent.logged = true;
+    //   this.username = '';
+    //   this.password = '';
+    // });
+    this.appComponent.logged = true;
+    this.username = '';
+    this.password = '';
   }
 }

@@ -1,17 +1,30 @@
 <div class="wrapper">
-   <div id="gradient">
-    <img  src="https://cdn.fishki.net/upload/post/2020/06/10/3341133/e8c971a0627d2f00264c2d493fde6f32.jpg"
-         alt="Teacher's photo"  width=200px ></div>  
-         <div class="info">
-       Name: <div class="teacher">Erran </div>
-      Surname: <div class="teacher">Gaengerf</div>
-      Position:  <div class="teacher">Teacher</div>
-      <div class="list">
-        <a routerLink="/course-adding">Add Course</a>
-        <a routerLink="/current-courses">My Courses</a>
+  <div class="left">
+    <img src="https://cdn.fishki.net/upload/post/2020/06/10/3341133/e8c971a0627d2f00264c2d493fde6f32.jpg" width="100%">
+  </div>
+  <div class="right">
+
+    <div class="info">
+      <h3>Information</h3>
+      <div class="info_data">
+        <div class="data">
+          <h4>Name</h4>
+          <p>{{this.name}}</p>
+        </div>
+        <div class="data">
+          <h4>Surname</h4>
+          <p>{{this.surname}}</p>
+        </div>
       </div>
     </div>
-    <div id="continue">
-       d
+    <div class="category">
+      <h3>Category - {{this.category}}</h3>
     </div>
+
+    <div class="buttons">
+      <a routerLink="/course-adding"><button>Add Course</button></a>
+      <a routerLink="/current-courses"><button>My courses</button></a>
     </div>
+
+  </div>
+</div>

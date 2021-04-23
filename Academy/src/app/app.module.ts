@@ -19,6 +19,9 @@ import {FormsModule} from '@angular/forms';
 import {AuthInterceptor} from './AuthInterceptor';
 import { BuyPageComponent } from './buy-page/buy-page.component';
 
+import { ShareButtonModule } from 'ngx-sharebuttons/button';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,11 @@ import { BuyPageComponent } from './buy-page/buy-page.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ShareButtonModule.withConfig({
+      debug: true,
+    }),
+    ShareIconsModule,
+    ShareButtonsModule,
   ],
   providers: [
     {

@@ -1,14 +1,30 @@
 <div class="wrapper">
-  <div id="gradient">
-  <img src="https://www.adzuna.com/blog/wp-content/uploads/2017/04/chace-crawford-004.jpg"
-       alt="User's photo"  width=190px></div>
-  <div class="info">Name: <div class="user">Chace </div> 
-    Surname: <div class="user">Wonderkolf</div>
-    Position:<div class="user">Student</div>
-    <div class="list">
-      <a routerLink="/wishlist">WishList</a>
-      <a routerLink="/current-courses">Current-courses</a><br>
-    </div>
-</div>
-</div>
+  <div class="left">
+    <img src="https://www.adzuna.com/blog/wp-content/uploads/2017/04/chace-crawford-004.jpg" width="100%">
+  </div>
+  <div class="right">
 
+    <div class="info">
+      <h3>Information</h3>
+      <div class="info_data">
+        <div class="data">
+          <h4>Name</h4>
+          <p>{{this.name}}</p>
+        </div>
+        <div class="data">
+          <h4>Surname</h4>
+          <p>{{this.surname}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <h3>Category - {{this.category}}</h3>
+    </div>
+
+    <div class="buttons">
+      <a routerLink="/wishlist"><button>My WishList</button></a>
+      <a routerLink="/current-courses"><button>My courses</button></a>
+    </div>
+
+  </div>
+</div>

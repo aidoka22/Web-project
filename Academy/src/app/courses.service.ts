@@ -7,14 +7,16 @@ import {COURSES} from "./courses-db";
 export class CoursesService {
 
   constructor() { }
+
   addToCourse(course){
     COURSES.push(course)
   }
+
   getCourses() {
     return COURSES;
   }
+
   getCourse(id: number) {
     return COURSES.find((x) => x.id === id);
   }
-
 }

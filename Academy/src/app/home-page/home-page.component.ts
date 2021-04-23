@@ -14,6 +14,7 @@ export class HomePageComponent implements OnInit {
   constructor(private appComponent: AppComponent) { }
 
   ngOnInit(): void {
-    this.logged = this.appComponent.logged
+    this.logged = this.appComponent.logged;
+    this.student = this.appComponent.student;
   }
 }
