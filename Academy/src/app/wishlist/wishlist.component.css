@@ -8,19 +8,19 @@
   background-color: whitesmoke;
 }
 h3{
-  background-color: #1f1f1f;
-  color: white;
-  padding: 30px;
-  padding-left: 50px;
-  font-weight: 200;
-  font-size: 25px;
+    background-color: #1f1f1f;
+    color: white;
+    padding: 30px;
+    padding-left: 50px;
+    font-weight: 200;
+    font-size: 25px;
 }
 .smallbtn{
   margin-left: 120px;
   width:20px;
 }
 .smallbtn:hover{
-  background-color: rgb(255, 255, 255);
+   background-color: rgb(255, 255, 255);
 }
 .btn {
   display: inline-table;
@@ -79,7 +79,7 @@ ul a:hover {
 .text {
   font-family: monospace;
   font-size: 14px;
-
+  
 }
 .name {
   text-align: center;
