@@ -3,70 +3,102 @@
   padding: 0;
   margin: 0;
 }
+.white {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
 .top{
+  position: absolute;
+  z-index: 2;
+  margin-top: 0;
+  width: 99%;
   background-color: #282828;
-  color: white;
-  height: 200px;
+  height: 250px;
 }
 .text {
+  z-index: 3;
   padding: 20px 10px;
   font-family: monospace;
   font-size: 14px;
+  width: 600px;
+}
+.text1 {
+  color: white;
+  position: absolute;
+}
+.text2 {
+  padding: 0px 10px;
+  margin-left: 15px;
+  list-style: circle;
+}
+.text2 li {
+  padding: 2px 0px;
 }
 .image-div {
   height: 135px;
   width: 240px;
   background-color: #b194ff;
 }
-.btn {
-  display: table;
-  padding: 10px;
-  margin: 10px;
-  width: 120px;
-  font-family: monospace;
-  background-color: white;
-  border-radius: 3px;
-}
-.btn:hover {
-  transition-duration: 0.4s;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background-color: #5232b7;
-  color: white;
-  cursor: pointer;
-}
-
 .side {
   position: absolute;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   height: 500px;
   width: 240px;
   padding: 5px;
-  top: 100px;
+  top: 150px;
   right: 330px;
+  z-index: 4;
+  border-radius: 5px;
 }
 
 .bottom {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 350px;
   width: 600px;
+  height: 250px;
+  border-radius: 5px;
+  z-index: 2;
 }
-
-.wishlist {
-  background-color: #282828;
-  border-color: white;
-  color: white;
-  margin: 0;
-  position: absolute;
-  top: 240px;
-}
-
-.share {
-  left: 480px;
-}
-
-.goback {
-  position: absolute;
-  top: 561px;
-}
-.sidebtn {
+.buttonsside button{
+  padding: 10px;
+  margin: 10px;
   width: 220px;
+}
+button {
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.buttons button {
+  margin-top: 100px;
+  width: 150px;
+}
+.buttons .btn {
+  margin-left: 25px;
+}
+button:hover {
+  background: #9c14de;
+  color: white;
+  border-color: white;
+  transition: all 0.3s ease 0s;
+}
+.goback {
+  width: 150px;
+  position: absolute;
+  top: 265px;
+}
+.course-details-div {
+  margin-left: 300px;
 }

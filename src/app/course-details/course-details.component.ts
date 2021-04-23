@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Course} from "../models";
-import {ActivatedRoute} from "@angular/router";
+import {Course} from '../models';
+import {ActivatedRoute} from '@angular/router';
 import {COURSES} from "../courses-db";
-import {Location} from "@angular/common";
-import {CoursesService} from "../courses.service";
-import {CartService} from "../cart.service";
+import {Location} from '@angular/common';
+import {CoursesService} from '../courses.service';
+import {CartService} from '../cart.service';
 
 @Component({
   selector: 'app-course-details',

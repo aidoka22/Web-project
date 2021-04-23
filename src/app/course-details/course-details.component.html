@@ -1,23 +1,35 @@
-<div *ngIf="course">
-  <div class="top text">
+<div class="top"></div>
+<div class="white"></div>
+<div *ngIf="course" class="course-details-div">
+  <div class="text text1">
     <h2>Course of {{course.name}}</h2>
     <h4>{{course.title}}</h4>
-    <button class="btn wishlist">Wishlist</button>
-    <button class="btn wishlist share">Share</button>
+    <div class="buttons">
+      <button>Wishlist</button>
+      <button class="btn">Share</button>
+    </div>
   </div>
 
   <div class="side">
     <div class="image-div"></div>
     <p class="text">Cost: {{course.cost | currency}}</p>
-    <button (click)="addToCart(course)" class="btn sidebtn">Add to Cart</button>
-    <button class="btn sidebtn">Buy now</button>
+    <div class="buttonsside">
+      <button (click)="addToCart(course)" class="btn sidebtn">Add to Cart</button>
+      <button routerLink="/buy">Buy now</button>
+    </div>
+    <p class="text">This course includes:</p>
+    <ul class="text text2">
+      <li>Articles</li>
+      <li>Documentation</li>
+      <li>Video material</li>
+      <li>Activities</li>
+      <li>Tests</li>
+    </ul>
   </div>
 
   <div class="bottom">
     <p class="text">{{course.description}}</p>
-    <button (click)="goBack()" class="btn goback">Go Back</button>
+    <button (click)="goBack()" class="goback">Go Back</button>
   </div>
-
-
 </div>
 
