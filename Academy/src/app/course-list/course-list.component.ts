@@ -11,7 +11,6 @@ import {CoursesService} from "../courses.service";
 })
 export class CourseListComponent implements OnInit {
   courses: Course[];
-  public logged = false;
 
   constructor(private coursesService: CoursesService) {
     // this.courses = [];
@@ -25,5 +24,14 @@ export class CourseListComponent implements OnInit {
   getCourses() {
     this.courses = this.coursesService.getCourses();
   }
+
+  scroll($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
+  // scroll(el: HTMLElement) {
+  //   el.scrollIntoView();
+  // }
 
 }

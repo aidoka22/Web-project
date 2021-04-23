@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Course} from "../models";
-import {ActivatedRoute} from "@angular/router";
+import {Course} from '../models';
+import {ActivatedRoute} from '@angular/router';
 import {COURSES} from "../courses-db";
-import {Location} from "@angular/common";
-import {CoursesService} from "../courses.service";
-import {CartService} from "../cart.service";
-import {WishListService} from "../wishlist.service";
+import {Location} from '@angular/common';
+import {CoursesService} from '../courses.service';
+import {CartService} from '../cart.service';
 
 @Component({
   selector: 'app-course-details',
@@ -17,8 +16,7 @@ export class CourseDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private location: Location,
               private coursesService: CoursesService,
-              private cartService: CartService,
-              private wishListService:WishListService) { }
+              private cartService: CartService) { }
 
   ngOnInit(): void {
     // const id = +this.route.snapshot.paramMap.get('id');
@@ -39,9 +37,7 @@ export class CourseDetailsComponent implements OnInit {
     this.cartService.addToCart(course);
     window.alert('The course has been added to the cart!');
   }
-  addToWishList(course){
-    this.wishListService.addToList(course);
-  }
+
   goBack(): void {
     this.location.back();
   }

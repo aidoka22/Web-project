@@ -1,7 +1,7 @@
 from django.contrib import admin
 from api.models import Teacher, Student, Category, Course
 
-admin.register(Teacher)
-admin.register(Student)
-admin.register(Category)
-admin.register(Course)
+admin.site.register(Teacher)
+admin.site.register(Student)
+admin.site.register(Category)
+admin.site.register(Course)
