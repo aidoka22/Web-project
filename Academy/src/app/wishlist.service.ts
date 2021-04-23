@@ -8,6 +8,9 @@ export class WishListService {
 
   addToList(course){
     this.wishs.push((course));
+    this.wishs=this.wishs.filter((item, index) => {
+      return this.wishs.indexOf(item) === index
+  });
   }
 
   getwishs(){
