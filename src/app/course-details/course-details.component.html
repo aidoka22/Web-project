@@ -5,7 +5,7 @@
     <h2>Course of {{course.name}}</h2>
     <h4>{{course.title}}</h4>
     <div class="buttons">
-      <button>Wishlist</button>
+      <button (click)="addToWishList(course)" class="btn wishlist"> Add to Wishlist</button>
       <button class="btn">Share</button>
     </div>
   </div>
@@ -34,4 +34,3 @@
     <button (click)="goBack()" class="goback">Go Back</button>
   </div>
 </div>
-
