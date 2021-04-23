@@ -1,0 +1,50 @@
+/*css*/
+.btn {
+  display: table;
+  padding: 10px;
+  /*margin: 10px;*/
+  width: 120px;
+  font-family: monospace;
+  background-color: white;
+  border-radius: 3px;
+  display: inline;
+  margin-top: -10px;
+}
+.btn:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #5232b7;
+  color: white;
+  cursor: pointer;
+}
+.top{
+  background-color: #4f4f4f;
+  color: white;
+  /*width: 100%;*/
+}
+.text {
+  font-family: monospace;
+  padding: 20px 10px;
+}
+.text2 {
+  font-family: monospace;
+  padding: 20px 10px;
+  font-size: 15px;
+}
+.course-div {
+  width: 97.5%;
+  /*height: 50px;*/
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.course-div:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.right{
+  float: right;
+}
+.btn2{
+  margin-top: 10px;
+}

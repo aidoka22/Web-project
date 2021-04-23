@@ -1,0 +1,10 @@
+<div class="top">
+  <h2 class="text">Shopping Cart</h2>
+</div>
+
+<div *ngFor="let item  of items" class="course-div text2">
+  <span>{{item.name}} </span>
+  <span>{{item.cost | currency}}</span>
+  <button class="btn right">Buy</button>
+</div>
+<button (click)="clearCart()" class="btn btn2">Clear</button>

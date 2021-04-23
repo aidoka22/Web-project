@@ -1,0 +1,72 @@
+/*css*/
+* {
+  padding: 0;
+  margin: 0;
+}
+.top{
+  background-color: #282828;
+  color: white;
+  height: 200px;
+}
+.text {
+  padding: 20px 10px;
+  font-family: monospace;
+  font-size: 14px;
+}
+.image-div {
+  height: 135px;
+  width: 240px;
+  background-color: #b194ff;
+}
+.btn {
+  display: table;
+  padding: 10px;
+  margin: 10px;
+  width: 120px;
+  font-family: monospace;
+  background-color: white;
+  border-radius: 3px;
+}
+.btn:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #5232b7;
+  color: white;
+  cursor: pointer;
+}
+
+.side {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  height: 500px;
+  width: 240px;
+  padding: 5px;
+  top: 100px;
+  right: 330px;
+}
+
+.bottom {
+  width: 600px;
+}
+
+.wishlist {
+  background-color: #282828;
+  border-color: white;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 240px;
+}
+
+.share {
+  left: 480px;
+}
+
+.goback {
+  position: absolute;
+  top: 561px;
+}
+.sidebtn {
+  width: 220px;
+}

@@ -1,0 +1,12 @@
+<span class="center"><h3>Wishlist</h3>
+<ul>
+<li *ngFor="let wish  of wishs" class="wish-detail">
+    <span>{{wish.name}} </span>
+    <a>{{wish.title}}</a>
+    <span> Cost: {{wish.cost | currency}}</span><br>
+    <button class="btn right">Buy</button>
+    <button (click)="addToCart(wish)" class="btn right">Add to Cart</button>
+  </li>
+</ul>
+  <button (click)="clearWishList()" class="btn">Clear</button>
+</span>

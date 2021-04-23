@@ -1,0 +1,21 @@
+<div *ngIf="course">
+  <div class="top text">
+    <h2>Course of {{course.name}}</h2>
+    <h4>{{course.title}}</h4>
+    <button (click)="addToWishList(course)" class="btn wishlist">Add to Wishlist</button>
+    <button class="btn wishlist share">Share</button>
+  </div>
+
+  <div class="side">
+    <div class="image-div"></div>
+    <p class="text">Cost: {{course.cost | currency}}</p>
+    <button (click)="addToCart(course)" class="btn sidebtn">Add to Cart</button>
+    <button class="btn sidebtn">Buy now</button>
+  </div>
+
+  <div class="bottom">
+    <p class="text">{{course.description}}</p>
+    <button (click)="goBack()" class="btn goback">Go Back</button>
+  </div>
+</div>
+
