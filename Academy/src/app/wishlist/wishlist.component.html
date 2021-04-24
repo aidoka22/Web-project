@@ -8,7 +8,7 @@
     </div>
       <a >{{wish.title}}</a>
       <h4>{{wish.cost | currency}}</h4>
-      <button class="btn right">Buy</button>
+      <button  routerLink="/buy" class="btn right">Buy</button>
       <button (click)="addToCart(wish)" class="btn right">Add to Cart</button>
     </li>
   </ul>

@@ -7,16 +7,15 @@
     <span>{{item.name}} </span>
     <span>{{item.cost | currency}}</span>
     <div class="buttons right">
-      <button class="smallbtn">♡</button>
+      <button class="smallbtn" (click)="addToWishList(item)">♡</button>
       <span> | </span>
-      <button class="smallbtn">X</button>
+      <button class="smallbtn" (click)="deleteFromCart(item)">X</button>
     </div>
   </div>
   <div class="buttons right" *ngIf="showBuy">
     <button routerLink="/buy">Buy</button>
   </div>
 </div>
-
 <div class="buttons clearbtn">
   <button (click)="clearCart()">Clear</button>
 </div>

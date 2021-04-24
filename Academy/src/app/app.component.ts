@@ -9,18 +9,18 @@ export class AppComponent implements OnInit {
   title = 'webcourses';
   logged = false;
 
-  student = true;
-  teacher = false;
+  student = false;
+  teacher = true;
 
   ngOnInit(): void {
-    // const token = localStorage.getItem('token');
-    // if (token) {
-    //   this.logged = true;
-    // }
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.logged = true;
+    }
   }
 
   logout() {
-    this.logged = false
-    // localStorage.removeItem('token');
+    this.logged = false;
+    localStorage.removeItem('token');
   }
 }
