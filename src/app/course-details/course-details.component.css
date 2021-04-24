@@ -1,4 +1,3 @@
-/*css*/
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +16,13 @@
   width: 99%;
   background-color: #282828;
   height: 250px;
+}
+.sharetext {
+  z-index: 3;
+  display: inline-block;
+  font-size: 17px;
+  padding: 0px 20px 0px 50px;
+  /*margin: 0;*/
 }
 .text {
   z-index: 3;
@@ -86,7 +92,8 @@ button {
   width: 150px;
 }
 .buttons .btn {
-  margin-left: 25px;
+  margin-top: -30px;
+  margin-left: 270px;
 }
 button:hover {
   background: #9c14de;

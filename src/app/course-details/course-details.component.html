@@ -5,13 +5,26 @@
     <h2>Course of {{course.name}}</h2>
     <h4>{{course.title}}</h4>
     <div class="buttons">
-      <button>Wishlist</button>
-      <button class="btn">Share</button>
+      <button (click)="addToWishList(course)" class="wishlist"> Add to Wishlist</button>
+      <p class="sharetext">Share</p>
+      <div class="btn">
+        <share-buttons
+          [theme]="'material-dark'"
+          [include]="['facebook','whatsapp','twitter','telegram','pinterest','copy']"
+          [show]="2"
+          [size]="1"
+          [url]="''"
+          [autoSetMeta]="false"
+        ></share-buttons>
+      </div>
+
     </div>
   </div>
 
   <div class="side">
-    <div class="image-div"></div>
+    <div class="image-div">
+      <img src="{{course.imagepath}}">
+    </div>
     <p class="text">Cost: {{course.cost | currency}}</p>
     <div class="buttonsside">
       <button (click)="addToCart(course)" class="btn sidebtn">Add to Cart</button>
@@ -32,4 +45,3 @@
     <button (click)="goBack()" class="goback">Go Back</button>
   </div>
 </div>
-
