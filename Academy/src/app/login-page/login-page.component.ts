@@ -8,31 +8,31 @@ import {AppComponent} from '../app.component';
   styleUrls: ['./login-page.component.css']
 })
 
-export class LoginPageComponent {
+export class LoginPageComponent implements OnInit{
 
   username = '';
   password = '';
   student = '';
 
   constructor(private loginService: LoginService, private appComponent: AppComponent) { }
-  //
-  // ngOnInit(): void {
-  //   const token = localStorage.getItem('token');
-  //   if (token) {
-  //     this.appComponent.logged = true
-  //   }
-  // }
+
+  ngOnInit(): void {
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.appComponent.logged = true;
+    }
+  }
 
   login() {
-    // // console.log(this.username)
-    // this.loginService.login(this.username, this.password).subscribe( (data) => {
-    //   localStorage.setItem('token', data.token);
-    //   this.appComponent.logged = true;
-    //   this.username = '';
-    //   this.password = '';
-    // });
-    this.appComponent.logged = true;
-    this.username = '';
-    this.password = '';
+    // console.log(this.username)
+    this.loginService.login(this.username, this.password).subscribe( (data) => {
+      localStorage.setItem('token', data.token);
+      this.appComponent.logged = true;
+      this.username = '';
+      this.password = '';
+    });
+    // this.appComponent.logged = true;
+    // this.username = '';
+    // this.password = '';
   }
 }

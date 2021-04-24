@@ -9,23 +9,20 @@ import {CartService} from '../cart.service';
 export class WishlistComponent implements OnInit {
   wishs=this.wishListService.getwishs();
   constructor(private wishListService:WishListService,
-    private cartService:CartService) { }
+              private cartService:CartService) { }
+
 
   ngOnInit(): void {
   }
   addToCart(wish){
-      this.cartService.addToCart(wish);
-      this.wishs=this.wishs.filter(obj => obj !==wish);
-      
+    this.cartService.addToCart(wish);
+    this.wishs=this.wishs.filter(obj => obj !==wish);
   }
   clearWishList(){
     this.wishs=this.wishListService.clearWishList();
   }
   deleteFromCart(wish){
-    if(this.wishs.length==1){
-      this.clearWishList();
-    }
-    else{
+    this.wishListService.deleteFromWishlist(wish);
     this.wishs=this.wishs.filter(obj => obj !==wish);
-  }}
+  }
 }

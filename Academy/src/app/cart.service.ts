@@ -18,5 +18,15 @@ export class CartService {
     this.items = [];
     return this.items;
   }
+
+  deleteFromCart(item) {
+    if (this.items.length === 1){
+      this.clearCart();
+    }
+    else{
+      this.items = this.items.filter(obj => obj !== item);
+    }
+  }
+
   constructor() { }
 }
