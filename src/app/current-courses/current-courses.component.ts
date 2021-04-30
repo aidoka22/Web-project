@@ -8,18 +8,18 @@ import {CurrentCoursesService} from "../current-courses.service";
   styleUrls: ['./current-courses.component.css']
 })
 export class CurrentCoursesComponent implements OnInit {
-  courses: Course[];
+  courses: Course[]=[];
 
   constructor(private currentcoursesService: CurrentCoursesService) {
-    // this.courses = [];
   }
 
   ngOnInit(): void {
     this.getCourses();
-    // this.courses = COURSES;
   }
 
   getCourses() {
-    this.courses = this.currentcoursesService.getCourses();
+    this.currentcoursesService.getCourses().subscribe((data) => {
+    this.courses = data;
+  });
   }
 }
