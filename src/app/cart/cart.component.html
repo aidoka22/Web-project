@@ -7,9 +7,9 @@
     <span>{{item.name}} </span>
     <span>{{item.cost | currency}}</span>
     <div class="buttons right">
-      <button class="smallbtn">♡</button>
+      <button (click)="addToWishList(item)" class="smallbtn">♡</button>
       <span> | </span>
-      <button class="smallbtn">X</button>
+      <button (click)="deleteFromCart(item)" class="smallbtn">X</button>
     </div>
   </div>
   <div class="buttons right">
@@ -20,4 +20,3 @@
 <div class="buttons clearbtn">
   <button (click)="clearCart()">Clear</button>
 </div>
-
