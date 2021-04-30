@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Course} from "../models";
-import {ActivatedRoute} from "@angular/router";
-import {COURSES} from "../courses-db";
-import {Location} from "@angular/common";
-import {CoursesService} from "../courses.service";
-import {CartService} from "../cart.service";
-import {WishListService} from "../wishlist.service";
+import {Course} from '../models';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
+import {CoursesService} from '../courses.service';
+import {CartService} from '../cart.service';
+import {WishListService} from '../wishlist.service';
 
 @Component({
   selector: 'app-course-details',
@@ -18,7 +17,7 @@ export class CourseDetailsComponent implements OnInit {
               private location: Location,
               private coursesService: CoursesService,
               private cartService: CartService,
-              private wishListService:WishListService) { }
+              private wishListService: WishListService) { }
 
   ngOnInit(): void {
     // const id = +this.route.snapshot.paramMap.get('id');
@@ -32,7 +31,9 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   getCourse(id: number) {
-    this.course = this.coursesService.getCourse(id);
+    this.coursesService.getCourse(id).subscribe((data) => {
+      this.course = data;
+    });
   }
 
   addToCart(course) {
