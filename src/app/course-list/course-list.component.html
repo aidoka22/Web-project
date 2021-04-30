@@ -3,7 +3,7 @@
     <h1>Courses to get you started</h1>
     <h2>Start learning now</h2>
     <div class="buttons">
-      <button (click)="scroll(target)">View Courses</button>
+      <button (click)="getCourses()" (click)="scroll(target)">View Courses</button>
     </div>
 
   </div>
@@ -11,10 +11,10 @@
 
 <div #target class="categories">
   <ul>
-    <li>Web Development</li>
-    <li>Game Development</li>
-    <li>App Development</li>
-    <li>IT & Software</li>
+    <li><a (click)="getCourses()">All</a></li>
+    <li *ngFor="let category of categories">
+      <a (click)="getCategory(category.id)">{{category.name}}</a>
+    </li>
   </ul>
 </div>
 
@@ -23,12 +23,11 @@
     <li *ngFor="let course of courses" class="text">
       <p class="text name">{{course.name}}</p>
       <div class="image-div">
-      <img src="{{course.imagepath}}">
-    </div>
+        <img src="{{course.imagepath}}">
+      </div>
       <!--    <a routerLink="/courses/{{course.id}}">{{course.id}}) {{course.name}}</a>-->
       <a [routerLink]="['/courses', course.id]">{{course.title}}</a>
       <h4>{{course.cost | currency}}</h4>
     </li>
   </ul>
 </div>
-

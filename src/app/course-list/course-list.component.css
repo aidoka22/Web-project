@@ -96,11 +96,12 @@ ul a:hover {
   color: white;
 }
 .courses-div {
-  margin-left: 50px;
-  margin-top: 50px;
+  margin-left: 1%;
+  margin-top: 1%;
 }
 .categories {
-  margin-left: 180px;
+  /*margin-left: 180px;*/
+  text-align: center;
 }
 .categories li {
   text-align: center;
@@ -111,4 +112,9 @@ ul a:hover {
   font-weight: bold;
   color: #5232b7;
   cursor: pointer;
+}
+
+.courses-div {
+  width: 98%;
+  text-align: center;
 }
