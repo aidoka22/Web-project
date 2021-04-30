@@ -2,13 +2,13 @@
 <div class="wishs-div">
   <ul>
     <li *ngFor="let wish of wishs" class="text">
-      <div class="text name">{{wish.name}}  <button (click)="deleteFromCart(wish)"class="smallbtn">X</button></div>
+      <div class="text name">{{wish.name}}  <button (click)="deleteFromWishList(wish)"class="smallbtn">X</button></div>
       <div class="image-div">
       <img src="{{wish.imagepath}}">
     </div>
       <a >{{wish.title}}</a>
       <h4>{{wish.cost | currency}}</h4>
-      <button class="btn right">Buy</button>
+      <button  routerLink="/buy" class="btn right">Buy</button>
       <button (click)="addToCart(wish)" class="btn right">Add to Cart</button>
     </li>
   </ul>
