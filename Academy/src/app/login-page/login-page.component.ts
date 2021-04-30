@@ -12,7 +12,7 @@ export class LoginPageComponent implements OnInit{
 
   username = '';
   password = '';
-  student = '';
+  teacher = false;
 
   constructor(private loginService: LoginService, private appComponent: AppComponent) { }
 

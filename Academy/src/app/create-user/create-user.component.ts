@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {RegisterService} from "../register.service";
 
 @Component({
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.css']
 })
+
 export class CreateUserComponent implements OnInit {
 
   name = '';
@@ -12,14 +14,15 @@ export class CreateUserComponent implements OnInit {
   username = '';
   password = '';
   category = '';
-  student = false;
+  teacher = false;
 
-  constructor() { }
+  constructor(private registerService: RegisterService) { }
 
   ngOnInit(): void {
   }
 
   register() {
-    console.log(this.student === false);
+    this.registerService.register(this.username, '', this.password);
+    console.log(1);
   }
 }

@@ -1,9 +1,8 @@
 <div class="box"> <!--action="index.html" method="post"-->
   <div class="top">
     <h1>Register</h1>
-    <p>Register as a student or teacher?</p>
-    <input type="radio" name="choose" [(ngModel)]="student"> Student
-    <input type="radio" name="choose"> Teacher
+    <p>Register as a teacher?</p>
+    <input type="checkbox" name="choose" [(ngModel)]="teacher">Teacher
   </div>
   <input type="text" name="" placeholder="Name" [(ngModel)]="name">
   <input type="text" name="" placeholder="Surname" [(ngModel)]="surname">

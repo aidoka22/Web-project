@@ -9,8 +9,8 @@ export class AppComponent implements OnInit {
   title = 'webcourses';
   logged = false;
 
-  student = false;
-  teacher = true;
+  student = true;
+  teacher = false;
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');

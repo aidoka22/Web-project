@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'user-info', component: UserInfoComponent},
   {path: 'teacher-info', component: TeacherInfoComponent},
   {path: 'wishlist', component: WishlistComponent},
-  {path:'course-adding',component: CourseAddingComponent},
+  {path: 'course-adding',component: CourseAddingComponent},
   {path: 'current-courses', component: CurrentCoursesComponent},
   {path: 'courses', component: CourseListComponent},
   {path: 'courses/:id', component: CourseDetailsComponent},
