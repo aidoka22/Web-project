@@ -6,9 +6,11 @@
   <div class="center">
     <h1>Welcome to Academy</h1>
     <h2>Study Right Now</h2>
-     <div class="buttons">
-       <a routerLink="/login"><button>Start</button></a>
-       <button class="btn">Explore More</button>
-     </div>
+    <div class="buttons">
+      <a *ngIf="!logged" routerLink="/login"><button>Start</button></a>
+      <a *ngIf="logged && student" routerLink="/user-info"><button>Profile</button></a>
+      <a *ngIf="logged && !student" routerLink="/teacher-info"><button>Profile</button></a>
+<!--      <button class="btn">Explore More</button>-->
+    </div>
   </div>
 </div>

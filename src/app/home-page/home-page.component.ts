@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  logged = false;
+  student = false;
+
+  constructor(private appComponent: AppComponent) { }
 
   ngOnInit(): void {
+    this.logged = this.appComponent.logged;
+    this.student = this.appComponent.student;
   }
-
 }
